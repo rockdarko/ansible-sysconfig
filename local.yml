@@ -18,7 +18,6 @@
         - libvncserver
         - remmina
         - konversation
-        - onlyoffice
         - vlc
         - pkgconfig
         - fakeroot

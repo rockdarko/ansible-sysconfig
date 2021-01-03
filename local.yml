@@ -1,0 +1,34 @@
+---
+- hosts: localhost
+  connection: local
+  become: true
+  
+  tasks:
+  - name: install base software
+    pacman: 
+      name: 
+        - plasma-meta 
+        - kde-applications-meta
+        - plasma-wayland-session
+        - kde-gtk-config
+        - ttf-dejavu 
+        - ttf-liberation
+        - firefox
+        - x11vnc
+        - libvncserver
+        - remmina
+        - konversation
+        - onlyoffice
+        - vlc
+        - pkgconfig
+        - fakeroot
+        - make
+        - patch
+        - fuse
+        - autoconf
+        - htop
+        - git
+        - zsh
+      state: present
+      update_cache: yes
+    when: ansible_distribution == 'Archlinux'
